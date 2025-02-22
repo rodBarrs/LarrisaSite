@@ -1,0 +1,109 @@
+body{
+    background-color: #b40505;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    user-select: none;
+    overflow: hidden;
+}
+
+.container-login{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    width: 100%px;
+}
+
+.login{
+    background-color: #0e0e13;
+    padding: 50px;
+    border-radius: 50px;
+}
+#profile {
+    text-align: center; /* Centraliza o conteúdo horizontalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+#profile img {
+    width: 200px; /* Tamanho da imagem */
+    height: 200px; /* Tamanho da imagem */
+    border-radius: 50%; /* Deixa a imagem redonda */
+    border: 5px solid #ff6f61; /* Borda romântica em tom de rosa */
+    box-shadow: 0 0 20px rgba(255, 111, 97, 0.5); /* Sombra suave e romântica */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de hover suave */
+}
+
+#profile img:hover {
+    transform: scale(1.1); /* Aumenta levemente a imagem ao passar o mouse */
+    box-shadow: 0 0 30px rgba(255, 111, 97, 0.8); /* Sombra mais intensa no hover */
+}
+
+#profile h1 {
+    font-family: 'Dancing Script', cursive; /* Fonte romântica e cursiva */
+    font-size: 28px; /* Tamanho do texto */
+    color: #ff6f61; /* Cor romântica em tom de rosa */
+    margin-top: 15px; /* Espaço acima do texto */
+    text-shadow: 0 0 10px rgba(255, 111, 97, 0.5); /* Sombra suave no texto */
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+#sucesso, #preencha, #negado{
+    display: none;
+    text-align: center;
+}
+
+input{
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #252A34;
+    border: none;
+    height: 45px;
+    border-radius: 8px;
+    color: #CBD0F7;
+    padding-left: 2%;
+}
+
+input:focus{
+    outline: 2px solid #CBD0F7;
+}
+
+input::placeholder{
+    color: #CBD0F7;
+}
+
+form [type="submit"]{
+    display: block;
+    background-color: #5568FE;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+form [type="submit"]:hover{
+    background-color: #3b4abe;
+}
+
+p{
+    color: #CBD0F7;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #5568FE;
+}
+@media screen and (max-width: 76px8 ){
+.container-login{
+    width:100%;
+    flex-direction: column;
+}
+}

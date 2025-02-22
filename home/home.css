@@ -1,0 +1,356 @@
+body {
+    background-color: #b40505;
+    font-family: 'Georgia', serif; /* Fonte romântica */
+    color: white;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    overflow: auto;
+    
+}
+
+.luz {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+    animation: cintilar 2s infinite ease-in-out;
+}
+
+@keyframes cintilar {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes cair {
+    0% {
+        transform: translateY(-10%);
+    }
+    100% {
+        transform: translateY(110%);
+    }
+}
+
+.petala {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff6f61; /* Cor das pétalas */
+    border-radius: 50%;
+    animation: cair 5s linear infinite;
+}
+
+p {
+    font-size: 20px;
+    text-align: center; /* Centraliza o texto e as quebras de linha */
+    font-family: 'Dancing Script', cursive; /* Fonte cursiva e romântica */
+    margin: 0 auto; /* Centraliza o parágrafo no contêiner (se necessário) */
+    max-width: 80%; /* Define uma largura máxima para o parágrafo */
+}
+
+h1{
+    text-align: center; /* Centraliza o texto e as quebras de linha */
+    font-family: 'Dancing Script', cursive; /* Fonte cursiva e romântica */
+    margin: 0 auto; /* Centraliza o parágrafo no contêiner (se necessário) */
+    max-width: 80%; /* Define uma largura máxima para o parágrafo */
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    padding: 20px;
+}
+
+#Titulo {
+    background-color: #f9f5e3; /* Cor de fundo que simula papel */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    margin-bottom: 20px; /* Espaço entre o título e a caixa */
+}
+
+#Titulo h3 {
+    font-family: 'Dancing Script', cursive; /* Fonte cursiva e romântica */
+    font-size: 40px;
+    color: #6b4f4f; /* Cor que combina com o fundo de papel */
+    margin: 0;
+    line-height: 1.2;
+}
+
+#caixaCoisas {
+    background-color: #f9f5e3; /* Cor de fundo que simula papel */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    margin-bottom: 20px; /* Espaço entre a caixa e o conteúdo */
+}
+
+#caixaCoisas h7 {
+    font-family: 'Dancing Script', cursive; /* Fonte cursiva e romântica */
+    font-size: 40px;
+    color: #6b4f4f; /* Cor que combina com o fundo de papel */
+    margin: 0;
+    line-height: 1.2;
+}
+
+.coisas-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas */
+    gap: 10px; /* Espaço entre as colunas */
+    text-align: left;
+    padding: 0 20px;
+}
+
+.coisas-grid p {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #6b4f4f; /* Cor do texto */
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive; /* Fonte cursiva e romântica */ 
+    margin-top: 30px; /* Espaço acima dos títulos */
+}
+
+/* Estilo para o título "Músicas que me lembram você" */
+h1[style*="Merriweather"] {
+    font-family: 'Merriweather', serif; /* Fonte diferente */
+    font-size: 35px;
+    color: #141212; /* Cor que combina com o fundo de papel */
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza o título */
+}
+
+/* Caixa individual para cada música */
+.caixa-musica {
+    background-color: #f9f5e3; /* Fundo branco no mesmo tom das outras caixas */
+    padding: 15px; /* Reduz o padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    max-width: 500px; /* Largura máxima menor */
+    width: 90%; /* Ajusta a largura para telas menores */
+    margin: 0 auto 20px; /* Centraliza e adiciona espaço abaixo */
+}
+
+/* Estilo para cada música */
+.musica {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+}
+
+/* Container para o nome da música e do artista */
+.info-musica {
+    width: 40%; /* Largura do nome da música e do artista */
+    text-align: left;
+}
+
+/* Nome da música */
+.nome-musica {
+    font-family: 'Roboto', sans-serif; /* Fonte simples e grossa */
+    font-weight: bold; /* Negrito */
+    font-size: 20px; /* Tamanho maior */
+    color: #6b4f4f;
+    margin-bottom: 5px; /* Espaço entre o nome da música e o artista */
+}
+
+/* Nome do artista */
+.nome-artista {
+    font-family: 'Roboto', sans-serif; /* Fonte simples */
+    font-size: 16px; /* Tamanho menor */
+    color: #6b4f4f;
+}
+
+/* Trecho da letra */
+.trecho-letra {
+    font-family: 'Dancing Script', cursive; /* Fonte romântica e elegante */
+    font-size: 18px; /* Tamanho menor */
+    color: #6b4f4f;
+    width: 60%; /* Largura do trecho da letra */
+    text-align: right;
+    padding-left: 10px; /* Espaço entre o nome e o trecho */
+}
+
+
+.coracao {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff6f61; /* Cor do coração */
+    transform: rotate(-45deg);
+    animation: flutuar 5s infinite ease-in-out;
+}
+
+.coracao::before,
+.coracao::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff6f61;
+    border-radius: 50%;
+}
+
+.coracao::before {
+    top: -10px;
+    left: 0;
+}
+
+.coracao::after {
+    top: 0;
+    left: 10px;
+}
+
+/* Animação de flutuação */
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0) rotate(-45deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(-45deg);
+    }
+}
+
+.foto {
+    text-align: center; /* Centraliza a foto */
+    margin: 20px 0; /* Espaço acima e abaixo */
+}
+
+.foto img {
+    width: 200px; /* Tamanho da foto */
+    height: 200px;
+    border-radius: 10px; /* Bordas arredondadas */
+    border: 5px solid #f9f5e3; /* Borda branca */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    object-fit: cover; /* Garante que a foto cubra o espaço sem distorcer */
+    transition: transform 0.3s ease; /* Efeito de hover suave */
+}
+
+.foto img:hover {
+    transform: scale(1.1); /* Aumenta levemente a foto ao passar o mouse */
+}
+
+/* Estilo para fotos ao lado de textos */
+.foto-texto {
+    display: flex;
+    align-items: center; /* Alinha a foto e o texto verticalmente */
+    gap: 20px; /* Espaço entre a foto e o texto */
+    margin: 20px 0;
+}
+
+.foto-texto .foto img {
+    width: 150px; /* Tamanho menor para fotos ao lado de textos */
+    height: 150px;
+}
+
+/* Estilo da caixa final */
+.caixa-final {
+    background-color: #f9f5e3; /* Fundo branco no mesmo tom das outras caixas */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    max-width: 500px; /* Largura máxima da caixa */
+    width: 90%; /* Largura relativa à tela */
+    margin: 50px auto; /* Centraliza a caixa */
+    text-align: center; /* Centraliza o conteúdo */
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+}
+
+/* Estilo do texto */
+.caixa-final h1 {
+    font-family: 'Dancing Script', cursive; /* Fonte romântica */
+    font-size: 40px; /* Tamanho grande */
+    color: #6b4f4f; /* Cor que combina com o fundo */
+    margin-bottom: 10px; /* Espaço abaixo do texto */
+}
+
+.caixa-final h2 {
+    font-family: 'Dancing Script', cursive; /* Fonte romântica */
+    font-size: 35px; /* Tamanho um pouco menor */
+    color: #6b4f4f; /* Cor que combina com o fundo */
+    margin-bottom: 10px; /* Espaço abaixo do texto */
+}
+
+.caixa-final p {
+    font-family: 'Dancing Script', cursive; /* Fonte romântica */
+    font-size: 25px; /* Tamanho menor */
+    color: #6b4f4f; /* Cor que combina com o fundo */
+    margin-bottom: 20px; /* Espaço abaixo do texto */
+}
+
+/* Estilo da foto final */
+.foto-final img {
+    width: 200px; /* Tamanho da foto */
+    height: 200px;
+    border-radius: 10px; /* Bordas arredondadas */
+    border: 5px solid #f9f5e3; /* Borda branca */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    object-fit: cover; /* Garante que a foto cubra o espaço sem distorcer */
+}
+
+
+@media screen and (max-width: 768px) {
+    .coisas-grid {
+        grid-template-columns: 1fr 1fr; /* Uma coluna em telas pequenas */
+    }
+
+    .caixa-musica {
+        padding: 10px; /* Padding menor em telas pequenas */
+    }
+
+    .nome-musica {
+        font-size: 18px; /* Tamanho menor para o nome da música */
+    }
+
+    .nome-artista {
+        font-size: 14px; /* Tamanho menor para o nome do artista */
+    }
+
+    .trecho-letra {
+        font-size: 16px; /* Tamanho menor para o trecho da letra */
+    }
+
+    .foto img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .foto-texto {
+        flex-direction: column; /* Empilha foto e texto em telas pequenas */
+        text-align: center;
+    }
+
+    .caixa-final {
+        padding: 20px; /* Reduz o padding em telas pequenas */
+    }
+
+    .caixa-final h1 {
+        font-size: 32px; /* Reduz o tamanho da fonte */
+    }
+
+    .caixa-final h2 {
+        font-size: 28px; /* Reduz o tamanho da fonte */
+    }
+
+    .caixa-final p {
+        font-size: 20px; /* Reduz o tamanho da fonte */
+    }
+
+    .foto-final img {
+        width: 150px; /* Reduz o tamanho da foto */
+        height: 150px;
+    }
+}
